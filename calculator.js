@@ -16,26 +16,38 @@ let num1 = Number(prompt('Enter your first number:'))
 let num2 = Number(prompt('Enter yor second number:'))
 let result = 0
 let operator = prompt('+,-,*,/')
+let printResult = true
 
-if(operator === "+"){
-    let result = num1 + num2
-    console.log(num1 + " + " + num2 + " = " + result)
+// if(operator === "+"){
+//     let result = num1 + num2
+//     console.log(num1 + " + " + num2 + " = " + result)
+// }
+// if(operator === "-"){
+//     let result = num1 - num2
+//     console.log(num1 + " - " + num2 + " = " + result)
+// }
+// if(operator === "*"){
+//     let result = num1 * num2
+//     console.log(num1 + " + " + num2 + " = " + result)
+// }
+// if(operator === "/"){
+//     let result = num1 / num2
+//     console.log(num1 + " + " + num2 + " = " + result)
+// }
 
+if(operator === "+" ){
+    result = num1 + num2
+}else if (operator === "-"){
+    result = num1 - num2
+}else if (operator === "*"){
+    result = num1 * num2
+}else if (operator === "/"){
+    result = num1 / num2
+}else{
+    console.log("Invalid operator")
+    printResult = false
 }
 
-if(operator === "-"){
-    let result = num1 - num2
-    console.log(num1 + " - " + num2 + " = " + result)
-}
-
-if(operator === "*"){
-    let result = num1 * num2
-    console.log(num1 + " + " + num2 + " = " + result)
-
-}
-
-if(operator === "/"){
-    let result = num1 / num2
-    console.log(num1 + " + " + num2 + " = " + result)
-
+if(printResult === true){
+    console.log(num1 + operator + num2 + " = " + result )
 }
